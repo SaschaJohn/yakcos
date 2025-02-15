@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd
+  namespace: argocd
+spec:
+  destination:
+    name: ''
+    namespace: argocd
+    server: 'https://akscluster-iyqurhs8.hcp.centralindia.azmk8s.io:443'
+  source:
+    path: bootstrap/argocd/hub
+    repoURL: >-
+      https://github.com/SaschaJohn/yakcos
+    targetRevision: main
+  project: argocd
+  syncPolicy:
+    syncOptions:
+    - PrunePropagationPolicy=orphan
+    - ApplyOutOfSyncOnly=true
+    automated:
+      prune: false
+      selfHeal: true
