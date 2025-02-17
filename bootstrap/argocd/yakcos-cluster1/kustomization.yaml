@@ -10,3 +10,4 @@ resources:
 
 patches:
 - path: argo-cd-cm.yaml
+- path: argocd-cmd-params-cm.yaml
