@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: grafana.mnm-solutions.de
+  namespace: tooling  
+spec:
+  commonName: grafana.mnm-solutions.de
+  dnsNames:
+  - grafana.mnm-solutions.de
+  issuerRef:
+    kind: ClusterIssuer
+    name: dode
+  secretName: grafana.mnm-solutions.de-tls
