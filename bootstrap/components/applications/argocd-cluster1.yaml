@@ -8,7 +8,7 @@ spec:
     name: 'in-cluster'
     namespace: argocd
   source:
-    path: bootstrap/argocd/hub
+    path: bootstrap/argocd/in-cluster
     repoURL: >-
       git@github.com:SaschaJohn/yakcos.git
     targetRevision: main
