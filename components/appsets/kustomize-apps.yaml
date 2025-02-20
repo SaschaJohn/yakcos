@@ -1,0 +1,34 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: kustomize-apps
+spec:
+  generators:
+  - git:
+      repoURL: git@github.com:SaschaJohn/yakcos.git
+      revision: main
+      directories:
+      - path: apps/*/*/*/overlays/*
+
+  template:
+    metadata:
+      name: '{{path[2]}}-{{path[5]}}-{{path[3]}}'
+      labels:
+        mnm-solutions.de/app: '{{path[2]}}'
+        mnm-solutions.de/project: '{{path[1]}}'      
+    spec:
+      project: '{{path[1]}}'
+      source:
+        repoURL: git@github.com:SaschaJohn/yakcos.git
+        targetRevision: main
+        path: '{{path}}'
+      destination:
+        name: '{{path[3]}}'
+        namespace: '{{path[5]}}'
+      syncPolicy:
+        syncOptions:
+        - PrunePropagationPolicy=orphan
+        - ApplyOutOfSyncOnly=true
+        automated:
+          prune: true
+          selfHeal: true
