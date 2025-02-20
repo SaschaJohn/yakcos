@@ -5,15 +5,14 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    name: ''
+    name: 'in-cluster'
     namespace: argocd
-    server: 'https://akscluster-iyqurhs8.hcp.centralindia.azmk8s.io:443'
   source:
     path: bootstrap/argocd/hub
     repoURL: >-
-      https://github.com/SaschaJohn/yakcos
+      git@github.com:SaschaJohn/yakcos.git
     targetRevision: main
-  project: argocd
+  project: platform
   syncPolicy:
     syncOptions:
     - PrunePropagationPolicy=orphan
