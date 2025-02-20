@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
   - cert.yaml
+  - httproute.yaml
 
 helmCharts:
   - name: grafana
