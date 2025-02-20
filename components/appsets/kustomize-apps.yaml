@@ -9,6 +9,7 @@ spec:
       revision: main
       directories:
       - path: apps/*/*/*/overlays/*
+      - path: core/*/*/*/overlays/*
 
   template:
     metadata:
