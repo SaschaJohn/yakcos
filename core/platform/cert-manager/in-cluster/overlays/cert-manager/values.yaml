@@ -222,41 +222,7 @@ enableCertificateOwnerRef: false
 config:
   apiVersion: controller.config.cert-manager.io/v1alpha1
   kind: ControllerConfiguration
-#    logging:
-#      verbosity: 2
-#      format: text
-#    leaderElectionConfig:
-#      namespace: kube-system
-#    kubernetesAPIQPS: 9000
-#    kubernetesAPIBurst: 9000
-#    numberOfConcurrentWorkers: 200
-    enableGatewayAPI: true
-#    # Feature gates as of v1.17.0. Listed with their default values.
-#    # See https://cert-manager.io/docs/cli/controller/
-#    featureGates:
-#      AdditionalCertificateOutputFormats: true # BETA - default=true
-#      AllAlpha: false # ALPHA - default=false
-#      AllBeta: false # BETA - default=false
-#      ExperimentalCertificateSigningRequestControllers: false # ALPHA - default=false
-#      ExperimentalGatewayAPISupport: true # BETA - default=true
-#      LiteralCertificateSubject: true # BETA - default=true
-#      NameConstraints: true # BETA - default=true
-#      OtherNames: false # ALPHA - default=false
-#      SecretsFilteredCaching: true # BETA - default=true
-#      ServerSideApply: false # ALPHA - default=false
-#      StableCertificateRequestName: true # BETA - default=true
-#      UseCertificateRequestBasicConstraints: false # ALPHA - default=false
-#      UseDomainQualifiedFinalizer: true # BETA - default=false
-#      ValidateCAA: false # ALPHA - default=false
-#    # Configure the metrics server for TLS
-#    # See https://cert-manager.io/docs/devops-tips/prometheus-metrics/#tls
-#    metricsTLSConfig:
-#      dynamic:
-#        secretNamespace: "cert-manager"
-#        secretName: "cert-manager-metrics-ca"
-#        dnsNames:
-#        - cert-manager-metrics
-#  config: {}
+  enableGatewayAPI: true
 
 # Setting Nameservers for DNS01 Self Check.
 # For more information, see the [cert-manager documentation](https://cert-manager.io/docs/configuration/acme/dns01/#setting-nameservers-for-dns01-self-check).
