@@ -8,3 +8,9 @@ helmCharts:
     releaseName: cilium
     namespace: kube-system
     valuesFile: values.yaml
+
+patches:
+- target:
+    kind: ConfigMap
+    name: cilium-config
+  path: patch-cilium-config.json
