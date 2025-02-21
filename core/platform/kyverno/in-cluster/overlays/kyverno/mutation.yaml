@@ -1,0 +1,19 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: policy-replica-coroot
+spec:
+  rules:
+    - name: pcoroot1
+      match:
+        any:
+        - resources:
+            names:
+              - coroot-clickhouse-keeper
+            kinds:
+            - StatefulSet
+      mutate:
+        patchesJson6902: |-
+          - path: "/spec/replicas"
+            op: add
+            value: 1  
