@@ -7,7 +7,7 @@ alloy:
 
         basic_auth {
           username = "909589"
-          password = env("GRAFANA_API_TOKEN")
+          password = sys.env("GRAFANA_API_TOKEN")
          }
         }
       }
