@@ -9,6 +9,9 @@ patches:
   - patch: |-
       - op: add
         path: /spec/template/spec/containers/0/args/-
-        value: --crd-pattern=resources.azure.com/*;containerservice.azure.com/*;network.azure.com/*;compute.azure.com/*      
+        value: --crd-pattern=resources.azure.com/*;containerservice.azure.com/*;network.azure.com/*;compute.azure.com/*
+      - path: "/spec/replicas"
+        op: add
+        value: 1 
     target:
       kind: Deployment
