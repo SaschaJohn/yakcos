@@ -1,0 +1,13 @@
+alloy:
+  configMap:
+    content: |-
+      loki.write "grafanacloud" {
+        endpoint {
+        url = "https://logs-prod-012.grafana.net/loki/api/v1/push"
+
+        basic_auth {
+          username = "909589"
+          password = "changeme!"
+         }
+        }
+      }
