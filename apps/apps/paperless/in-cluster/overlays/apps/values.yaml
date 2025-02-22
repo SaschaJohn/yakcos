@@ -51,7 +51,7 @@ persistence:
     enabled: true
     retain: true
     mountPath: /usr/src/paperless/data
-    storageClass: "azurefile"
+    storageClass: "azure-file-csi-standard-lrs"
     accessMode: ReadWriteOnce
     size: 1Gi
   # -- Configure media volume settings for the chart under this key.
@@ -60,7 +60,7 @@ persistence:
     enabled: true
     retain: true
     mountPath: /usr/src/paperless/media
-    storageClass: "azurefile"
+    storageClass: "azure-file-csi-standard-lrs"
     accessMode: ReadWriteOnce
     size: 8Gi
   # -- Configure export volume settings for the chart under this key.
@@ -69,7 +69,7 @@ persistence:
     enabled: true
     retain: true
     mountPath: /usr/src/paperless/export
-    storageClass: "azurefile"
+    storageClass: "azure-file-csi-standard-lrs"
     accessMode: ReadWriteOnce
     size: 1Gi
   # -- Configure consume volume settings for the chart under this key.
@@ -78,7 +78,7 @@ persistence:
     enabled: true
     retain: true
     mountPath: /usr/src/paperless/consume
-    storageClass: "azurefile"
+    storageClass: "azure-file-csi-standard-lrs"
     accessMode: ReadWriteOnce
     size: 4Gi
 
