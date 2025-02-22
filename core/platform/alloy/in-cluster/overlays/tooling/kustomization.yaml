@@ -8,3 +8,16 @@ helmCharts:
     releaseName: alloy
     namespace: tooling
     valuesFile: values.yaml
+
+patches:
+  - patch: |-
+      - op: add
+        path: /spec/template/spec/containers/0/env/-
+        value:
+          name: GRAFANA_API_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: grafana-api-token
+              key: password
+    target:
+      kind: DaemonSet

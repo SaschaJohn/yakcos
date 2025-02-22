@@ -7,7 +7,7 @@ alloy:
 
         basic_auth {
           username = "909589"
-          password = "changeme!"
+          password = "${GRAFANA_API_TOKEN}"
          }
         }
       }
