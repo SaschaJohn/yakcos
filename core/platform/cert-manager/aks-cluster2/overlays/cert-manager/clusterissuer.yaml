@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: dode
+spec:
+  acme:
+    email: sjhesse@gmail.com
+    privateKeySecretRef:
+      name: dode-issuer
+    server: https://acme-v02.api.letsencrypt.org/directory
+    solvers:
+    - dns01:
+        webhook:
+          groupName: lego.dns-solver
+          solverName: lego-solver
+          config:
+            provider: dode
+            envFrom:
+              secret:
+                name: dode-secret          
