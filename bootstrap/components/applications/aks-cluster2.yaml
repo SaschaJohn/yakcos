@@ -7,11 +7,15 @@ spec:
   destination:
     name: "aks-cluster2"
     namespace: kube-system
-  source:
-    path: bootstrap/gatewayapi
-    repoURL: >-
-      git@github.com:SaschaJohn/yakcos.git
-    targetRevision: main
+  sources:
+    - path: bootstrap/gatewayapi
+      repoURL: >-
+        git@github.com:SaschaJohn/yakcos.git
+      targetRevision: main
+    - path: bootstrap/storageclass
+      repoURL: >-
+        git@github.com:SaschaJohn/yakcos.git
+      targetRevision: main
   project: platform
   syncPolicy:
     syncOptions:
