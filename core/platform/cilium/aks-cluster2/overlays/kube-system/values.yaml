@@ -19,6 +19,7 @@ clustermesh:
   useAPIServer: true
 externalWorkloads:
   enabled: true
+kubeProxyReplacement: "true"
 ipam:
   operator:
     clusterPoolIPv4PodCIDRList:
