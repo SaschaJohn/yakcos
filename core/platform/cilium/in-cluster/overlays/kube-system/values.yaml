@@ -19,6 +19,8 @@ clustermesh:
   useAPIServer: true
 externalWorkloads:
   enabled: true
+gatewayAPI:
+  enabled: true
 ipam:
   operator:
     clusterPoolIPv4PodCIDRList:
