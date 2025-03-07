@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: mnm-solutions.de
+spec:
+  commonName: '*.mnm-solutions.de'
+  dnsNames:
+  - '*.mnm-solutions.de'
+  issuerRef:
+    kind: ClusterIssuer
+    name: dode
+  secretName: mnm-solutions.de-tls
