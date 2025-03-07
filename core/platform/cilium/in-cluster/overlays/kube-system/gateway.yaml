@@ -43,5 +43,4 @@ spec:
       - group: ""
         kind: Secret
         name: mnm-solutions.de-tls
-        namespace: default
       mode: Terminate
