@@ -17,6 +17,7 @@ spec:
       - group: ""
         kind: Secret
         name: mnm-solutions.de-tls
+        namespace: kube-system
       mode: Terminate
   - allowedRoutes:
       namespaces:
@@ -30,6 +31,7 @@ spec:
       - group: ""
         kind: Secret
         name: mnm-solutions.de-tls
+        namespace: kube-system
       mode: Terminate
   - allowedRoutes:
       namespaces:
@@ -43,4 +45,5 @@ spec:
       - group: ""
         kind: Secret
         name: mnm-solutions.de-tls
+        namespace: kube-system
       mode: Terminate
