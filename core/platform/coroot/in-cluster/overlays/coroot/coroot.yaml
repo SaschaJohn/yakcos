@@ -4,7 +4,7 @@ metadata:
   name: coroot
   namespace: coroot
 spec:
-  clickchouse:
+  clickhouse:
     keeper:
       storage:
         className: azurefile
