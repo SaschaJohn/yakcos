@@ -3,3 +3,8 @@ kind: Coroot
 metadata:
   name: coroot
   namespace: coroot
+spec:
+  clickchouse:
+    keeper:
+      storage:
+        className: azurefile
