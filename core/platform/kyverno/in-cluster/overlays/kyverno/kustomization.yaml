@@ -3,7 +3,6 @@ kind: Kustomization
 
 resources:
   - crb.yaml
-  - mutation.yaml
 
 helmCharts:
   - name: kyverno
