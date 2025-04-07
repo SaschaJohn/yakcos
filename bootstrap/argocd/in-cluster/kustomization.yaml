@@ -8,8 +8,8 @@ resources:
 - project-apps.yaml
 - https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.2.0/standard-install.yaml
 - https://raw.githubusercontent.com/kubernetes-sigs/gateway-api/v1.2.0/config/crd/experimental/gateway.networking.k8s.io_tlsroutes.yaml
+- https-argocd-route-1.yaml
 
 patches:
 - path: argo-cd-cm.yaml
 - path: argocd-cmd-params-cm.yaml
-- path: https-argocd-route-1.yaml
