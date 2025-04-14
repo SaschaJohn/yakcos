@@ -3130,7 +3130,7 @@ clustermesh:
       # @schema
       override: ~
       repository: "quay.io/cilium/clustermesh-apiserver"
-      tag: "v1.17.1"
+      tag: "v1.17.3"
       # clustermesh-apiserver-digest
       digest: ""
       useDigest: false
