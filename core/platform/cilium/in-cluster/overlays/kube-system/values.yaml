@@ -191,7 +191,7 @@ image:
   # @schema
   override: ~
   repository: "quay.io/cilium/cilium"
-  tag: "v1.17.1"
+  tag: "v1.17.3"
   pullPolicy: "IfNotPresent"
   # cilium-digest
   digest: ""
@@ -2982,7 +2982,7 @@ preflight:
     # @schema
     override: ~
     repository: "quay.io/cilium/cilium"
-    tag: "v1.17.1"
+    tag: "v1.17.3"
     # cilium-digest
     digest: ""
     useDigest: false
