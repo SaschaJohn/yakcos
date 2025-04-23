@@ -7,7 +7,7 @@ resources:
 helmCharts:
   - name: coroot-operator
     repo:  https://coroot.github.io/helm-charts
-    version: 0.2.10
+    version: 0.3.0
     releaseName: coroot-operator
     namespace: coroot
     valuesFile: values.yaml
