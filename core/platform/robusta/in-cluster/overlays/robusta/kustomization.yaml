@@ -7,4 +7,4 @@ helmCharts:
     version: 0.22.0
     releaseName: robusta
     namespace: robusta
-    valuesFile: values.yaml‚
+    valuesFile: values.yaml
