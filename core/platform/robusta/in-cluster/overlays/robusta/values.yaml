@@ -1,0 +1,20 @@
+# This file contains API keys. To load them from secrets, refer to https://docs.robusta.dev/master/setup-robusta/configuration-secrets.html
+
+clusterName: aks-001 # NOTE - adjust the clusterName when adding additional clusters
+globalConfig:
+  signing_key: 6d1db85b-b217-41e6-87b3-d3b3163cdec4
+  account_id: 61b7fe02-389b-412b-aba2-e719e0e791e1
+sinksConfig:
+  - robusta_sink:
+      name: robusta_ui_sink
+      token: eyJhY2NvdW50X2lkIjogIjYxYjdmZTAyLTM4OWItNDEyYi1hYmEyLWU3MTllMGU3OTFlMSIsICJhcGlfa2V5IjogImV5SmhiR2NpT2lKSVV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUp5YjJ4bElqb2lZVzV2YmlJc0ltbGhkQ0k2TVRZeU5ERTNNalF5TkN3aVpYaHdJam94T1RNNU56UTROREkwZlEuaFJMdjZQQW54MWNhdkR3bC1pWXlnQXJINHFBMERWSFluckQ3MUFzcXFQdyIsICJzdG9yZV91cmwiOiAiaHR0cHM6Ly94dnlocG94Zm10cHVxcWV5cWtzby5zdXBhYmFzZS5jbyIsICJlbWFpbCI6ICJhcGl1c2VyLU1uTS1Tb2x1dGlvbnMtNDYwODI0QHJvYnVzdGEuZGV2IiwgInBhc3N3b3JkIjogIjhjZDNkYzQxLTJiMTItNDc2NC1iZjYyLWQ3ZDg5OTY0NzNmYiJ9
+enablePrometheusStack: true
+enablePlatformPlaybooks: true
+runner:
+  sendAdditionalTelemetry: true
+enableHolmesGPT: true
+enabledManagedConfiguration: true
+holmes:
+  additionalEnvVars:
+    - name: ROBUSTA_AI
+      value: "true"
