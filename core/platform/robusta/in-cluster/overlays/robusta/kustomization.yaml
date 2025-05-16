@@ -7,7 +7,7 @@ resources:
 helmCharts:
   - name: robusta
     repo:  https://robusta-charts.storage.googleapis.com
-    version: 0.22.0
+    version: 0.23.0
     releaseName: robusta
     namespace: robusta
     valuesFile: values.yaml
